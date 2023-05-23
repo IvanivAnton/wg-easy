@@ -227,6 +227,12 @@
                       :title="'Last seen on ' + dateTime(new Date(client.latestHandshakeAt))">
                       · {{new Date(client.latestHandshakeAt) | timeago}}
                     </span>
+                    
+                    <!-- Traffic TX Overall -->
+                    <span v-if="client.latestHandshakeAt"
+                      :title="Traffic">
+                      · {{ client.transferTx | bytes }} B
+                    </span>
                   </div>
                 </div>
 
